@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>UCenter 接口开发手册 - 头像接口</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link rel="stylesheet" href="images/style.css" type="text/css" media="all" />
+<meta content="Comsenz Inc." name="Copyright" />
+<script type="text/javascript" src="javascript/common.js"></script>
+</head>
+<body>
+<script type="text/javascript" src="javascript/header.js"></script>
+
+<h3>修改头像</h3>
+
+<div class="submsg">
+<h4><i>string</i> uc_avatar(<i>integer</i> uid)</h4>
+
+<h5>函数参数</h5>
+<table border="0" cellspacing="0" cellpadding="0" class="msgtable">
+<thead>
+	<tr>
+	<th>参数</th>
+	<td>含义</td>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+	<th><i>integer</i> uid</th>
+	<td>用户 ID</td>
+	</tr>
+</tbody>
+</table>
+
+<h5>返回值</h5>
+<table border="0" cellspacing="0" cellpadding="0" class="msgtable">
+<thead>
+	<tr>
+	<th>值</th>
+	<td>含义</td>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+	<th><i>string</i></th>
+	<td>修改头像的 HTML 代码</td>
+	</tr>
+</tbody>
+</table>
+
+<br />
+本接口函数用于生成可修改用户头像的 HTML 代码，生成的 HTML 显示效果类似如下效果。<br />
+<img src="images/avatar.jpg" /><br />
+</div>
+
+<h3>头像格式</h3>
+
+<div class="submsg">
+<table border="0" cellspacing="0" cellpadding="0" class="msgtable">
+<thead>
+	<tr>
+	<th style="width:100px">头像尺寸</th>
+	<td>调用方法</td>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+	<th style="width:100px">200 x 400</th>
+	<td><i>{UC_URL}</i>/avatar.php?uid=<i>{N}</i>&size=big</td>
+	</tr>
+	<tr>
+	<th style="width:100px">120 x 240</th>
+	<td><i>{UC_URL}</i>/avatar.php?uid=<i>{N}</i>&size=middle</td>
+	</tr>
+	<tr>
+	<th style="width:100px">48 x 48</th>
+	<td><i>{UC_URL}</i>/avatar.php?uid=<i>{N}</i>&size=small</td>
+	</tr>
+	</td></tr>
+</tbody>
+</table>
+
+<i>{UC_URL}</i> 为 UCenter 的 URL。<i>{N}</i> 为用户 ID。<br /><br />
+例如调用用户 ID 为 58 用户的 200 x 400 尺寸头像方法为：
+<div class="code"><pre>
+&lt;img src=&quot;http://www.yourwebsite.com/uc_server/avatar.php?uid=58&amp;size=big&quot; /&gt;
+</pre></div>
+
+</div>
+
+<script type="text/javascript" src="javascript/footer.js"></script>
+</body>
+</html>

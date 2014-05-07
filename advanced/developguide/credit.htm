@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>UCenter 接口开发手册 - 积分接口</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link rel="stylesheet" href="images/style.css" type="text/css" media="all" />
+<meta content="Comsenz Inc." name="Copyright" />
+<script type="text/javascript" src="javascript/common.js"></script>
+</head>
+<body>
+<script type="text/javascript" src="javascript/header.js"></script>
+
+<h3>积分兑换请求</h3>
+
+<div class="submsg">
+<h4><i>bool</i> uc_credit_exchange_request(<i>integer</i> uid , <i>integer</i> from , <i>integer</i> to , <i>integer</i> toappid , <i>integer</i> amount)</h4>
+
+<h5>函数参数</h5>
+<table border="0" cellspacing="0" cellpadding="0" class="msgtable">
+<thead>
+	<tr>
+	<th>参数</th>
+	<td>含义</td>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+	<th><i>integer</i> uid</th>
+	<td>用户 ID</td>
+	</tr>
+	<tr>
+	<th><i>integer</i> from</th>
+	<td>原积分</td>
+	</tr>
+	<tr>
+	<th><i>integer</i> to</th>
+	<td>目标积分</td>
+	</tr>
+	<tr>
+	<th><i>integer</i> toappid</th>
+	<td>目标应用ID</td>
+	</tr>
+	<tr>
+	<th><i>integer</i> amount</th>
+	<td>积分数额</td>
+	</tr>
+</tbody>
+</table>
+
+<h5>返回值</h5>
+<table border="0" cellspacing="0" cellpadding="0" class="msgtable">
+<thead>
+	<tr>
+	<th>值</th>
+	<td>含义</td>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+	<th><i>bool</i></th>
+	<td>
+	<em>1:</em>请求成功<br />
+	<em>0:</em>请求失败<br />
+	</td>
+	</tr>
+</tbody>
+</table>
+</div>
+
+<script type="text/javascript" src="javascript/footer.js"></script>
+</body>
+</html>
